@@ -24,8 +24,8 @@ This is a basic Android application that shows [Rick and Morty](https://rickandm
 * ✅ Lifecycle
 
 ### Demo
-<img src="./screenshots/home.png" height="400px" />
-<img src="./screenshots/details.png" height="400px" />
+<img src="./screenshots/home.png" width="250" height="542" />
+<img src="./screenshots/details.png" width="250" height="542" />
 
 # License
 ```xml
