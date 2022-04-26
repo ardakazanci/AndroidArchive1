@@ -45,7 +45,8 @@ object RickAndMortyModule {
             writeTimeout(30, TimeUnit.SECONDS)
             readTimeout(30, TimeUnit.SECONDS)
             addNetworkInterceptor(HttpLoggingInterceptor().apply {
-                level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
+                level =
+                    if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
             })
         }.build()
 
@@ -68,5 +69,6 @@ object RickAndMortyModule {
             app,
             AppDatabase::class.java,
             "rickmortydb"
-        ).build()
+        ).fallbackToDestructiveMigration()
+            .build()
 }
