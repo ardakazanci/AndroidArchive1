@@ -34,13 +34,6 @@ class CharacterDetailFragment : Fragment(R.layout.fragment_character_detail) {
         binding.apply {
             char.let {
                 character = it
-                //tvCharacterName.text = it.name
-                //tvCharacterSpecies.text = it.species
-                //tvCharacterGender.text = it.gender
-                //tvCharacterStatus.text = it.status
-                //ivCharacterProfile.load(it.image)
-                //tvCharacterOriginLocation.text = it.origin
-                //tvCharacterLastLocation.text = it.location
             }
         }
     }
