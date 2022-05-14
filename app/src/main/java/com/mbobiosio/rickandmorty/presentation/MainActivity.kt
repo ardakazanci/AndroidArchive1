@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(this, navigationController)
     }
 
-
     override fun onSupportNavigateUp(): Boolean {
         return navigationController.navigateUp()
     }

@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import coil.load
-import dagger.hilt.android.AndroidEntryPoint
 import com.mbobiosio.rickandmorty.R
 import com.mbobiosio.rickandmorty.databinding.FragmentCharacterDetailBinding
 import com.mbobiosio.rickandmorty.domain.model.Character
+import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
@@ -37,5 +36,4 @@ class CharacterDetailFragment : Fragment(R.layout.fragment_character_detail) {
             }
         }
     }
-
 }

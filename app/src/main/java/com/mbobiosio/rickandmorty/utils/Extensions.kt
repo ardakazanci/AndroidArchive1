@@ -1,4 +1,4 @@
-package com.mbobiosio.rickandmorty.extensions
+package com.mbobiosio.rickandmorty.utils
 
 import android.os.SystemClock
 import android.view.LayoutInflater

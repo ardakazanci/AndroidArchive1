@@ -3,11 +3,10 @@ package com.mbobiosio.rickandmorty.presentation.characterlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
-import dagger.hilt.android.lifecycle.HiltViewModel
 import com.mbobiosio.rickandmorty.domain.model.Character
 import com.mbobiosio.rickandmorty.domain.usecase.GetCharactersByName
 import com.mbobiosio.rickandmorty.utils.Constants.Companion.WAIT_TIME
-import javax.inject.Inject
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -17,6 +16,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
 class CharacterViewModel @Inject constructor(

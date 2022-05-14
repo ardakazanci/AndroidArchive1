@@ -29,4 +29,3 @@ fun TextView.characterStatus(status: String?) {
         }
     }
 }
-

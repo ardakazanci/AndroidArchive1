@@ -1,19 +1,21 @@
 package com.mbobiosio.rickandmorty.presentation.characterlist
 
 import android.os.Bundle
-import android.view.*
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import dagger.hilt.android.AndroidEntryPoint
 import com.mbobiosio.rickandmorty.R
 import com.mbobiosio.rickandmorty.databinding.FragmentCharacterBinding
 import com.mbobiosio.rickandmorty.domain.model.Character
-import com.mbobiosio.rickandmorty.extensions.safeNavigate
 import com.mbobiosio.rickandmorty.interfaces.CharacterClickListener
+import com.mbobiosio.rickandmorty.utils.safeNavigate
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -55,10 +57,8 @@ class CharacterFragment : Fragment(R.layout.fragment_character), CharacterClickL
                 performSearchEvent(query)
                 return false
             }
-
         })
     }
-
 
     private fun performSearchEvent(characterName: String) {
         characterViewModel.onEvent(CharacterEvent.GetAllCharactersByName(characterName))
